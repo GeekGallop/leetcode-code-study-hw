@@ -1,0 +1,25 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "C/C++: g++.exe 调试活动文件", // 调试配置名称，可自定义
+            "type": "cppvsdbg", // 调试器类型（Windows下MinGW用这个）
+            "request": "launch",
+            "program": "${fileDirname}\\${fileBasenameNoExtension}.exe", // 编译后的可执行文件路径
+            "args": [], // 程序运行参数（你的代码不需要，留空）
+            "stopAtEntry": false, // 是否在程序入口处暂停（新手建议设为false）
+            "cwd": "${fileDirname}", // 调试时的工作目录（代码所在目录）
+            "environment": [],
+            "externalConsole": true, // 弹出独立控制台（方便输入测试用例）
+            "preLaunchTask": "C/C++: g++.exe 生成活动文件", // 调试前先执行的编译任务（必须和tasks.json的label一致）
+            "miDebuggerPath":"F:\\C++\\mingw64\\mingw64\\bin\\gdb.exe", // 替换为你电脑中gdb.exe的实际路径
+            "setupCommands": [
+                {
+                    "description": "为gdb启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        }
+    ]
+}

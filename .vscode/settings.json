@@ -1,0 +1,20 @@
+{
+    "configurations": [
+        {
+            "name": "MinGW",  // 改名，避免和MSVC混淆
+            "includePath": [
+                "${workspaceFolder}/**",
+                "F:/C++/mingw64/mingw64/include/**",
+                "F:/C++/mingw64/mingw64/x86_64-w64-mingw32/include/**"
+            ],
+            "defines": ["_DEBUG", "UNICODE", "_UNICODE"],
+            "compilerPath": "F:/C++/mingw64/mingw64/bin/g++.exe",  // 你的MinGW路径
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "windows-gcc-x64",  // 匹配MinGW
+            "configurationProvider": "ms-vscode.makefile-tools"
+        }
+    ],
+    "version": 4,
+    "C_Cpp.default.compilerPath": "F:/C++/mingw64/mingw64/bin/gcc.exe"
+}

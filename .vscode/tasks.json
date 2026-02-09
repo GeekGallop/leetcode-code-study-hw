@@ -1,0 +1,26 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: g++.exe 生成活动文件", // 必须和launch.json的preLaunchTask值完全一致
+            "command":"F:\\C++\\mingw64\\mingw64\\bin\\g++.exe", // 替换为你电脑中g++.exe的实际路径
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g", // 核心！生成调试信息，没有这个断点无效
+                "${file}", // 要编译的当前活动文件（你的.cpp文件）
+                "-o", // 输出可执行文件
+                "${fileDirname}\\${fileBasenameNoExtension}.exe" // 输出路径（和launch.json的program对应）
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": ["$gcc"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "编译器: C:\\MinGW\\bin\\g++.exe" // 替换为你的g++.exe路径
+        }
+    ]
+}
